@@ -9,7 +9,7 @@ USER_PW = 'dlwhdtjs2'
 
 def run(playwright: Playwright) -> None:
     # chrome 브라우저를 실행
-    browser = playwright.chromium.launch()
+    browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
 
     # Open new page
